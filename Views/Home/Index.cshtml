@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model RegistrationFOrm
+<div class="container">
+    <div class="col-lg-6 form-submittion">
+        <h1>Enter Your Information</h1>
+        <form asp-action="registrationform" method="post" class="form-group col-lg-10">
+            <p>
+<p><span asp-validation-for="FirstName" class="error-style"></span></p>
+                <label asp-for="FirstName"></label>
+                    <input asp-for="FirstName" class="form-control" placeholder="Enter Your First Name"/>
+            </p>
+                <p>
+<p><span asp-validation-for="LastName" class="error-style"></span></p>
+                <label asp-for="LastName"></label>
+                    <input asp-for="LastName" class="form-control" placeholder="Enter Your Last Name"/>
+                </p>
+                <p>
+<p><span asp-validation-for="Age" class="error-style"></span></p>
+                <label asp-for="Age"></label>
+                    <input asp-for="Age" class="form-control" placeholder="Enter Your Age"/>
+                </p>
+                <p>
+<p><span asp-validation-for="Email" class="error-style"></span></p>
+                <label asp-for="Email"></label>
+                    <input asp-for="Email" class="form-control" placeholder="Enter Your Email Address"/>
+                </p>
+                <p>
+<p><span asp-validation-for="Password" class="error-style"></span></p>
+                <label asp-for="Password"></label>
+                    <input asp-for="Password" class="form-control" placeholder="Enter Your Password"/>
+                </p>
+                
+               <p>
+                <p><span asp-validation-for="ConfirmPassword" class="error-style"></span></p>
+                <label asp-for="ConfirmPassword"></label>
+                    <input asp-for="ConfirmPassword" class="form-control" placeholder="Please Confirm Your Password"/>
+               
+               </p>
+                <p>
+                    <input type="submit" class="btn btn-success" value="Reg User"/>
+                </p>
+        </form>
+    </div>
+</div>
